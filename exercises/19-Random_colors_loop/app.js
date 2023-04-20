@@ -16,11 +16,18 @@ function getColor(colorNumber = 0) {
 }
 
 function getAllStudentColors() {
-
+	const students = ["Lucas", "Martina", "Carlos", "Maria", "Juan", "Andrea", "Pedro", "Laura", "Pablo", "Carmen"];
+	const colors = [];
 	//your loop here
-	let exampleColor = getColor(1);
-}
-
+	for (let i = 0; i < students.length; i++) {
+		const randomNum = Math.floor(Math.random() * 4) + 1;
+		const color = getColor(randomNum);
+		colors.push(color);
+		console.log(`${students[i]}: ${color}`);
+	  }
+	
+	  return colors;
+	}
 //call the function below with the number of students in the class and print on the console
 getAllStudentColors();
 
